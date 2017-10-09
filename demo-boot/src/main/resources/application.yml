@@ -1,0 +1,20 @@
+server:
+  port: 8191
+#cxf:
+#  path: /demo/api/v1
+#  jaxrs:
+#    component-scan: true
+#    classes-scan-packages: org.apache.cxf.jaxrs.swagger
+#endpoints:
+#  jmx:
+#    enabled: true
+#    unique-names: true
+
+cxf:
+  path: /demo/api/v1
+  servlet.init:
+    service-list-path: /info
+  jaxrs:
+    component-scan: true
+    #cxf json集成 http://cxf.547215.n5.nabble.com/Spring-Boot-CXF-JAX-RS-and-Gradle-td5769675.html
+    classes-scan-packages: org.apache.cxf.jaxrs.swagger,com.fasterxml.jackson.jaxrs.json
