@@ -1,5 +1,5 @@
 server:
-  port: 8191
+  port: 6080
 #cxf:
 #  path: /demo/api/v1
 #  jaxrs:
