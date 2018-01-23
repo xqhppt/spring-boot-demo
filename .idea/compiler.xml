@@ -17,12 +17,12 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+      <profile default="false" name="Annotation profile for demo-web" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="demo-root" />
+        <module name="demo-web" />
       </profile>
       <profile default="false" name="Annotation profile for demo-dao" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -31,20 +31,6 @@
         <processorPath useClasspath="true" />
         <module name="demo-dao" />
       </profile>
-      <profile default="false" name="Annotation profile for demo-service" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="demo-service" />
-      </profile>
-      <profile default="false" name="Annotation profile for demo-web" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="demo-web" />
-      </profile>
       <profile default="false" name="Annotation profile for demo-entity" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -52,16 +38,16 @@
         <processorPath useClasspath="true" />
         <module name="demo-entity" />
       </profile>
-      <profile default="false" name="Annotation profile for demo-boot" enabled="true">
+      <profile default="false" name="Annotation profile for demo-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="demo-boot" />
+        <module name="demo-service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
-      <module name="demo-boot" target="1.8" />
+    <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
       <module name="demo-dao" target="1.8" />
       <module name="demo-entity" target="1.8" />
       <module name="demo-service" target="1.8" />

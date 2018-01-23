@@ -1,7 +1,6 @@
 package com.xqh.demo.enttiy.test;
 
 
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.Date;
 

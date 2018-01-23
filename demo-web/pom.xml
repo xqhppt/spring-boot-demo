@@ -4,7 +4,7 @@
 
     <parent>
         <artifactId>demo</artifactId>
-        <groupId>com.xqh</groupId>
+        <groupId>com.xqh.demo</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
@@ -17,12 +17,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.xqh</groupId>
+            <groupId>com.xqh.demo</groupId>
             <artifactId>demo-entity</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.xqh</groupId>
+            <groupId>com.xqh.demo</groupId>
             <artifactId>demo-service</artifactId>
             <version>${project.version}</version>
         </dependency>

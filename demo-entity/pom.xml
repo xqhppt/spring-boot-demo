@@ -4,7 +4,7 @@
 
     <parent>
         <artifactId>demo</artifactId>
-        <groupId>com.xqh</groupId>
+        <groupId>com.xqh.demo</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 

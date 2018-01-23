@@ -1,7 +1,5 @@
 package com.xqh.demo.web.api.test;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import com.xqh.demo.enttiy.test.TestEntity;
 import com.xqh.demo.service.test.TestService;
 import io.swagger.annotations.Api;
@@ -9,7 +7,6 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;

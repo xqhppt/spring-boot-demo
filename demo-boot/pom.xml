@@ -10,14 +10,14 @@
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
-		<groupId>com.xqh</groupId>
+		<groupId>com.xqh.demo</groupId>
 		<artifactId>demo</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
 	<dependencies>
 		<dependency>
-			<groupId>com.xqh</groupId>
+			<groupId>com.xqh.demo</groupId>
 			<artifactId>demo-web</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
