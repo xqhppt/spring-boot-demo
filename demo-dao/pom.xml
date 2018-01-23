@@ -11,15 +11,11 @@
     <artifactId>demo-dao</artifactId>
     <packaging>jar</packaging>
 
-    <build>
-        <finalName>demo-dao</finalName>
-    </build>
-
     <dependencies>
         <dependency>
             <groupId>com.xqh.demo</groupId>
             <artifactId>demo-entity</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>

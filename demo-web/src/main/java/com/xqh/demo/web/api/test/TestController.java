@@ -1,6 +1,5 @@
 package com.xqh.demo.web.api.test;
 
-import com.xqh.demo.enttiy.test.TestEntity;
 import com.xqh.demo.service.test.TestService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -11,7 +10,6 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import java.util.Date;
 
 /**
  * Created by xqh on 2017/10/3.
@@ -34,16 +32,16 @@ public class TestController {
         return testService.sayHello();
     }
 
-    @GET
-    @Path("/json")
-    @ApiOperation(value = "测试JSON", response = TestEntity.class)
-    @Produces("application/json")
-    public TestEntity testJson() {
-        TestEntity testEntity = new TestEntity();
-        testEntity.setId(11L);
-        testEntity.setDesc("json object");
-        testEntity.setDate(new Date());
-
-        return testEntity;
-    }
+//    @GET
+//    @Path("/json")
+//    @ApiOperation(value = "测试JSON", response = TestEntity.class)
+//    @Produces("application/json")
+//    public TestEntity testJson() {
+//        TestEntity testEntity = new TestEntity();
+//        testEntity.setId(11L);
+//        testEntity.setDesc("json object");
+//        testEntity.setDate(new Date());
+//
+//        return testEntity;
+//    }
 }

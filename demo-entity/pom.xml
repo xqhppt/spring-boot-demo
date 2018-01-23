@@ -10,9 +10,4 @@
 
     <artifactId>demo-entity</artifactId>
     <packaging>jar</packaging>
-
-
-    <build>
-        <finalName>demo-entity</finalName>
-    </build>
 </project>

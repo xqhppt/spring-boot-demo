@@ -9,9 +9,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="demo-entity" />
     <orderEntry type="module" module-name="demo-service" />
     <orderEntry type="module" module-name="demo-dao" />
+    <orderEntry type="module" module-name="demo-entity" />
     <orderEntry type="library" name="Maven: org.apache.cxf:cxf-spring-boot-starter-jaxrs:3.1.12" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:1.5.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:1.5.7.RELEASE" level="project" />

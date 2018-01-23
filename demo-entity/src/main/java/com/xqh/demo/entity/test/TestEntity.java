@@ -1,4 +1,4 @@
-package com.xqh.demo.enttiy.test;
+package com.xqh.demo.entity.test;
 
 
 import java.io.Serializable;

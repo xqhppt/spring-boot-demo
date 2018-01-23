@@ -38,6 +38,13 @@
         <processorPath useClasspath="true" />
         <module name="demo-entity" />
       </profile>
+      <profile default="false" name="Annotation profile for demo-boot" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="demo-boot" />
+      </profile>
       <profile default="false" name="Annotation profile for demo-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -46,12 +53,16 @@
         <module name="demo-service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="demo" target="1.8" />
+      <module name="demo-boot" target="1.8" />
       <module name="demo-dao" target="1.8" />
       <module name="demo-entity" target="1.8" />
       <module name="demo-service" target="1.8" />
       <module name="demo-web" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
   </component>
 </project>

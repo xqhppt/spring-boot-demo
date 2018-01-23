@@ -18,12 +18,12 @@
     <dependencies>
         <dependency>
             <groupId>com.xqh.demo</groupId>
-            <artifactId>demo-entity</artifactId>
+            <artifactId>demo-service</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.xqh.demo</groupId>
-            <artifactId>demo-service</artifactId>
+            <artifactId>demo-entity</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
