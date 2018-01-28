@@ -68,7 +68,11 @@ public class ResponseResult<T> implements Serializable {
         this.serverTime = df.format(new Date());
     }
 
-    public static<T> ResponseResult<T> createSuccess(T t) {
-        return new ResponseResult<T>(ApiResponseCode.SUCCESS.getCode(),t);
+    public static <T> ResponseResult<T> createSuccess(T t) {
+        return new ResponseResult<T>(ApiResponseCode.SUCCESS.getCode(), t);
+    }
+
+    public static <T> ResponseResult<T> createError(String message) {
+        return new ResponseResult<T>(ApiResponseCode.ERROR.getCode(), message);
     }
 }
