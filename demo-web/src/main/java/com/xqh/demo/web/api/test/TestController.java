@@ -46,4 +46,12 @@ public class TestController {
     public Date getDate(@RequestParam("date") Date date){
         return date;
     }
+
+    @RequestMapping(path = "/hi",method = RequestMethod.GET)
+    public HelloVo getHello(){
+        HelloVo helloVo = new HelloVo();
+        helloVo.setName("小王");
+        helloVo.setMsg("你好");
+        return helloVo;
+    }
 }
