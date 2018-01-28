@@ -1,6 +1,7 @@
 package com.xqh.demo.web.api.test;
 
 import com.xqh.demo.web.api.test.vo.HelloVo;
+import io.swagger.annotations.Api;
 import org.springframework.format.datetime.DateFormatter;
 import org.springframework.http.HttpEntity;
 import org.springframework.web.bind.WebDataBinder;
@@ -10,6 +11,7 @@ import java.util.Date;
 
 @RestController
 @RequestMapping("/test")
+@Api(tags = "测试", description = "测试spring mvc")
 public class TestController {
 
     @InitBinder

@@ -8,6 +8,7 @@ import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
+import springfox.documentation.spring.web.json.Json;
 
 /**
  * Created by xqh on 2018/1/28.
@@ -21,6 +22,12 @@ public class ResponseFilter implements ResponseBodyAdvice {
 
     @Override
     public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType, Class selectedConverterType, ServerHttpRequest request, ServerHttpResponse response) {
+//        if(body instanceof springfox.documentation.spring.web.json.Json){
+//            return body;
+//        }
+        if(request.getURI().getPath().contains("api-docs")){
+            return body;
+        }
         if(body instanceof ResponseResult){
             return body;
         }

@@ -5,6 +5,7 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.util.List;
@@ -28,5 +29,11 @@ public class MvcWebConfig extends WebMvcConfigurerAdapter {
 
         //HttpMessageConverter实例集合中StringHttpMessageConverter要比其他Converts靠前
         converters.add(0, new MappingJackson2HttpMessageConverter());
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        super.addResourceHandlers(registry);
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/META-INF/resources/").setCachePeriod(0);
     }
 }
