@@ -25,7 +25,8 @@ public class ResponseFilter implements ResponseBodyAdvice {
 //        if(body instanceof springfox.documentation.spring.web.json.Json){
 //            return body;
 //        }
-        if(request.getURI().getPath().contains("api-docs")){
+
+        if(request.getURI().getPath().contains("api-docs") || request.getURI().getPath().contains("swagger")){
             return body;
         }
         if(body instanceof ResponseResult){
