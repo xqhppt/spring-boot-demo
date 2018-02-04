@@ -4,6 +4,8 @@ import com.xqh.demo.entity.user.User;
 import com.xqh.demo.service.user.UserService;
 import com.xqh.demo.web.api.user.vo.UserVO;
 import io.swagger.annotations.Api;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * Created by xqh on 2018/2/4.
  */
@@ -24,6 +27,8 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService userService;
+
+    private static final Logger logger = LogManager.getLogger(UserController.class);
 
     @RequestMapping(path = "", method = RequestMethod.GET)
     public List<UserVO> getAll() {
@@ -37,6 +42,10 @@ public class UserController {
                 list.add(userVO);
             }
         }
+
+        logger.info("this is info log");
+        logger.warn("this is warn log");
+        logger.error("this is error log");
 
         return list;
     }
