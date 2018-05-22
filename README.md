@@ -8,6 +8,7 @@
     - Advice配置全局统一返回值和异常处理
 3. 集成Swagger
 4. 集成MyBatis
+5. 集成MyBatis Generator
 
 ### 2 项目启动
 1. Swagger UI
