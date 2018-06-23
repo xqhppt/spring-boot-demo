@@ -9,6 +9,7 @@
 3. 集成Swagger
 4. 集成MyBatis
 5. 集成MyBatis Generator
+6. 集成dubbo
 
 ### 2 项目启动
 1. Swagger UI

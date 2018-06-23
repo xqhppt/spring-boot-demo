@@ -22,6 +22,11 @@
             <artifactId>demo-dao</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.xqh.demo</groupId>
+            <artifactId>demo-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
