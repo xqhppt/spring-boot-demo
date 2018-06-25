@@ -150,4 +150,17 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <!--<distributionManagement>-->
+        <!--<repository>-->
+            <!--<id>nexus</id>-->
+            <!--<name>Releases</name>-->
+            <!--<url>http://repository.xxx.com/content/repositories/releases/</url>-->
+        <!--</repository>-->
+        <!--<snapshotRepository>-->
+            <!--<id>nexus</id>-->
+            <!--<name>Snapshots</name>-->
+            <!--<url>http://repository.xxx.com/content/repositories/snapshots/</url>-->
+        <!--</snapshotRepository>-->
+    <!--</distributionManagement>-->
 </project>

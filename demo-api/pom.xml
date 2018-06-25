@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <name>demo-api</name>
     <artifactId>demo-api</artifactId>
 
 

@@ -9,4 +9,6 @@
        default-autowire="byName">
 
     <dubbo:consumer timeout="60000"></dubbo:consumer>
+
+    <!--<dubbo:reference id="xxx" interface="xxx.xxx.xxx.xxxService" version="1.0.0" protocol="dubbo" check="false"/>-->
 </beans>

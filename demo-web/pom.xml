@@ -46,8 +46,6 @@
     </dependencies>
 
     <build>
-        <finalName>demo-web</finalName>
-
         <plugins>
             <plugin>
                 <groupId>org.mybatis.generator</groupId>
