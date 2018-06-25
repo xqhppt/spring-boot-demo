@@ -1,8 +1,11 @@
 package com.xqh.demo;
 
+import com.xqh.demo.shiro.MyRealm;
+import org.apache.shiro.realm.Realm;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
@@ -18,5 +21,10 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
+	}
+
+	@Bean
+	public Realm realm() {
+		return new MyRealm();
 	}
 }
