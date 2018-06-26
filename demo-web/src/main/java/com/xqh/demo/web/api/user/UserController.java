@@ -6,11 +6,9 @@ import com.xqh.demo.web.api.user.vo.UserVO;
 import io.swagger.annotations.Api;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -42,7 +40,7 @@ public class UserController {
         if (!CollectionUtils.isEmpty(users)) {
             for (User item : users) {
                 UserVO userVO = new UserVO();
-                BeanUtils.copyProperties(item,userVO);
+                BeanUtils.copyProperties(item, userVO);
                 list.add(userVO);
             }
         }
@@ -52,5 +50,16 @@ public class UserController {
         logger.error("this is error log");
 
         return list;
+    }
+
+    //@RequiresPermissions("get")
+    @RequestMapping(path = "/test", method = RequestMethod.GET)
+    public UserVO getUser() {
+        UserVO userVO = new UserVO();
+        userVO.setId(100L);
+        userVO.setAge((byte) 20);
+        userVO.setName("测试");
+
+        return userVO;
     }
 }

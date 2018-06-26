@@ -1,6 +1,8 @@
 package com.xqh.demo.web.filter;
 
+import com.xqh.demo.web.common.ApiResponseCode;
 import com.xqh.demo.web.common.ResponseResult;
+import org.apache.shiro.authz.UnauthorizedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -17,5 +19,10 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(NullPointerException.class)
     public ResponseResult nullPointerExceptionHandler(NullPointerException ex) {
         return ResponseResult.createError(ex.toString());
+    }
+
+    @ExceptionHandler(UnauthorizedException.class)
+    public ResponseResult unauthorizedExceptionHandler(UnauthorizedException ex) {
+        return ResponseResult.createError(ex.toString(), ApiResponseCode.ACCESS_DENIED);
     }
 }

@@ -4,7 +4,6 @@ import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
-import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -31,10 +30,23 @@ public class ShiroConfig {
         return securityManager;
     }
 
+//    @Bean
+//    public DefaultAdvisorAutoProxyCreator advisorAutoProxyCreator() {
+//        DefaultAdvisorAutoProxyCreator creator = new DefaultAdvisorAutoProxyCreator();
+//        creator.setProxyTargetClass(true);
+//        return creator;
+//    }
+
+    /**
+     * 开启注解支持
+     *
+     * @param securityManager
+     * @return
+     */
     @Bean
-    public DefaultAdvisorAutoProxyCreator advisorAutoProxyCreator() {
-        DefaultAdvisorAutoProxyCreator creator = new DefaultAdvisorAutoProxyCreator();
-        creator.setProxyTargetClass(true);
+    public AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisorCreator(SecurityManager securityManager) {
+        AuthorizationAttributeSourceAdvisor creator = new AuthorizationAttributeSourceAdvisor();
+        creator.setSecurityManager(securityManager);
         return creator;
     }
 
@@ -46,10 +58,15 @@ public class ShiroConfig {
         //自定义拦截器
         Map<String, Filter> filtersMap = new LinkedHashMap<String, Filter>();
         filtersMap.put("myAccessControlFilter", new MyAccessControlFilter());
+        filtersMap.put("myAdviceFilter", new MyAdviceFilter());
+
         shiroFilterFactoryBean.setFilters(filtersMap);
 
+
         Map<String, String> map = new HashMap<String, String>();
-        map.put("/**", "myAccessControlFilter");
+        //map.put("/**", "myAccessControlFilter,myAdviceFilter");
+        map.put("/user/test", "anon");
+        map.put("/**", "myAdviceFilter");
 
 //        //登出
 //        map.put("/logout","logout");

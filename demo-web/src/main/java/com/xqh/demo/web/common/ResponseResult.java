@@ -1,8 +1,5 @@
 package com.xqh.demo.web.common;
 
-import com.fasterxml.jackson.databind.JsonSerializable;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -74,5 +71,9 @@ public class ResponseResult<T> implements Serializable {
 
     public static <T> ResponseResult<T> createError(String message) {
         return new ResponseResult<T>(ApiResponseCode.ERROR.getCode(), message);
+    }
+
+    public static <T> ResponseResult<T> createError(String message, ApiResponseCode responseCode) {
+        return new ResponseResult<T>(responseCode.getCode(), message);
     }
 }

@@ -4,11 +4,12 @@ package com.xqh.demo.web.common;
  * Created by xqh on 2018/1/28.
  */
 public enum ApiResponseCode {
-    SUCCESS(0,"成功"),
-    ERROR(-1,"失败")
-    ;
+    SUCCESS(0, "成功"),
+    ERROR(-1, "失败"),
 
-    ApiResponseCode(int code,String name){
+    ACCESS_DENIED(4000, "无操作权限");
+
+    ApiResponseCode(int code, String name) {
         this.code = code;
         this.name = name;
     }

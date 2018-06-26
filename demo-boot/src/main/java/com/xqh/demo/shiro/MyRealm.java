@@ -1,10 +1,11 @@
 package com.xqh.demo.shiro;
 
-import com.google.common.collect.Sets;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.util.SetUtils;
-import org.apache.shiro.authc.*;
+import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.AuthenticationInfo;
+import org.apache.shiro.authc.AuthenticationToken;
+import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
@@ -47,9 +48,9 @@ public class MyRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         logger.info("doGetAuthenticationInfo");
 
-        AccessAuthenticationToken accessTokenAuthcToken = (AccessAuthenticationToken) token;
-        String accessToken = accessTokenAuthcToken.getAccessToken();
-        String userToken = accessTokenAuthcToken.getUserToken();
+        AccessAuthenticationToken accessAuthenticationToken = (AccessAuthenticationToken) token;
+        String accessToken = accessAuthenticationToken.getAccessToken();
+        String userToken = accessAuthenticationToken.getUserToken();
 
         //TODO 对比用户信息
 
