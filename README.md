@@ -12,6 +12,7 @@
 6. 集成dubbo
 7. 集成shiro
 8. 集成单元测试
+9. 集成redis
 
 ### 2 项目启动
 1. Swagger UI
